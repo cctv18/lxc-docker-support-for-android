@@ -33,6 +33,7 @@ config DOCKER
 	select PERSISTENT_KEYRINGS # TODO: required?
 	select ENCRYPTED_KEYS # TODO: required?
 	select KEY_DH_OPERATIONS # TODO: required?
+	select VLAN_8021Q
 
 	# From ebuild
 	select NAMESPACES
