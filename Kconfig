@@ -90,6 +90,8 @@ config DOCKER
         select CHECKPOINT_RESTORE
         select NETFILTER_XT_MATCH_CGROUP
         select BINFMT_MISC
+	
+	#May cuase bugs
 	select IP6_NF_NAT
 	select IP6_NF_TARGET_MASQUERADE
 	select SECURITY_APPARMOR
@@ -147,7 +149,7 @@ config DOCKER_AUFS
 
 config DOCKER_BTRFS
 	bool "Use btrfs"
-	default y if DOCKER
+	default n
 	depends on DOCKER
 	help
 		Yes if you are using btrfs
